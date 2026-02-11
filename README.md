@@ -15,4 +15,8 @@ gpg --batch --yes --armor --detach-sign \
   repo/redazuki/fedora/43/x86_64/repodata/repomd.xml
 
 aws s3 sync repo/redazuki/ s3://azukirepo/ --delete
+
+aws cloudfront create-invalidation \
+  --distribution-id ERCEX6I52VKU2 \
+  --paths "/fedora/43/x86_64/repodata/*"
 ```
