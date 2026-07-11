@@ -32,6 +32,9 @@ BuildRequires:  libxkbcommon-x11-devel
 BuildRequires:  pipewire-devel
 BuildRequires:  openvr-devel
 BuildRequires:  openxr-devel
+BuildRequires:  pkgconfig(dav1d) >= 1.3.0
+BuildRequires:  pkgconfig(vulkan)
+BuildRequires:  glslc
 
 %description
 A lightweight OpenXR/OpenVR overlay for Wayland and X11 desktops.
@@ -59,5 +62,7 @@ install -Dpm0755 target/release/build/ovr_overlay_sys-*/out/libopenvr_api.so %{b
 %{_libdir}/wayvr/libopenvr_api.so
 
 %changelog
+* Sat Jul 11 2026 RedAzuki - %{version}-%{release}
+- Add dav1d, vulkan and glslc dependencies
 * Sun Feb 03 2026 RedAzuki - %{version}-%{release}
 - Initial Fedora RPM packaging (all features)

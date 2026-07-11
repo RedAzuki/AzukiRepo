@@ -19,10 +19,10 @@ RUN dnf -y update && dnf -y install \
     fontconfig fontconfig-devel \
     dbus dbus-devel \
     alsa-lib alsa-lib-devel \
-    wayland-devel \
+    wayland-devel glslc \
     libX11-devel libXext-devel libXrandr-devel libxkbcommon-x11-devel \
-    pipewire-devel \
-    openvr-devel openxr-devel
+    pipewire-devel vulkan-loader-devel \
+    openvr-devel openxr-devel libdav1d-devel
 
 RUN useradd -m builder
 USER builder
