@@ -35,6 +35,7 @@ BuildRequires:  openxr-devel
 BuildRequires:  pkgconfig(dav1d) >= 1.3.0
 BuildRequires:  pkgconfig(vulkan)
 BuildRequires:  glslc
+BuildRequires:  libinput-devel
 
 %description
 A lightweight OpenXR/OpenVR overlay for Wayland and X11 desktops.

@@ -1,7 +1,7 @@
 ARG FEDORA_VERSION
 FROM fedora:${FEDORA_VERSION}
 
-RUN dnf -y update && dnf -y install \
+RUN dnf -y update && dnf -y install --refresh \
     git \
     rpmdevtools rpmlint rpm-build \
     rust cargo rust-packaging \
@@ -22,7 +22,8 @@ RUN dnf -y update && dnf -y install \
     wayland-devel glslc \
     libX11-devel libXext-devel libXrandr-devel libxkbcommon-x11-devel \
     pipewire-devel vulkan-loader-devel \
-    openvr-devel openxr-devel libdav1d-devel
+    openvr-devel openxr-devel libdav1d-devel \
+    libinput-devel
 
 RUN useradd -m builder
 USER builder
